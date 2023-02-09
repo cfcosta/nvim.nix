@@ -19,17 +19,6 @@
             source = ./.;
             recursive = true;
           };
-
-          home.file.nvim-packer = {
-            target = ".local/share/nvim/site/pack/packer/start/packer.nvim";
-
-            source = pkgs.fetchFromGitHub {
-              owner = "wbthomason";
-              repo = "packer.nvim";
-              rev = "master";
-              sha256 = "sha256-YAhAFiR31aGl2SEsA/itP+KgkLyV58EJEwosdc+No9s=";
-            };
-          };
         };
       };
   };
