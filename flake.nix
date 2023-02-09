@@ -3,7 +3,7 @@
 
   inputs = { nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable"; };
 
-  outputs = { nixpkgs }: {
+  outputs = { nixpkgs, ... }: {
     hmModule = { options, config, lib, pkgs, ... }:
       let cfg = config.programs.devos.neovim;
       in {
