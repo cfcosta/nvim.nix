@@ -17,11 +17,6 @@ return require('packer').startup(function(use)
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     requires = { {'nvim-lua/plenary.nvim'} },
-    config = function()
-      vim.keymap.set('n', '<space><space>', ':Telescope find_files<cr>', opts)
-      vim.keymap.set('n', '<space>/', ':Telescope live_grep<cr>', opts)
-      vim.keymap.set('n', '<space>bb', ':Telescope buffers<cr>', opts)
-    end
   }
 
   use {
@@ -29,9 +24,6 @@ return require('packer').startup(function(use)
     requires = {
       'ryanoasis/vim-devicons'
     },
-    config = function()
-      vim.keymap.set('n', '<space>op', ':NvimTreeToggle<cr>', opts)
-    end
   }
 
   use {
@@ -41,7 +33,6 @@ return require('packer').startup(function(use)
       'sindrets/diffview.nvim'
     },
     config = function()
-      vim.keymap.set('n', '<space>gg', ':Neogit<cr>', opts)
       local neogit = require("neogit")
 
       neogit.setup({
